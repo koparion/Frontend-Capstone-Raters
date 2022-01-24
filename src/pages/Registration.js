@@ -5,8 +5,9 @@ import "../App.css";
 
 export default function Registration() {
   const [usernameReg, setUsernameReg] = useState("");   //states that will store all registered information
+  const [firstnameReg, setFirstNameReg] = useState("");
   const [passwordReg, setPasswordReg] = useState("");
-  const [nameReg, setNameReg] = useState(""); 
+  const [lastnameReg, setLastNameReg] = useState(""); 
   const [countryReg, setCountryReg] = useState("");
   const [emailReg, setEmailReg] = useState("");
   const [dateReg, setDateReg] = useState("");
@@ -16,39 +17,55 @@ export default function Registration() {
 
   const [loginStatus, setLoginStatus] = useState("");   //will be used to hold a message that is returned from the backend if username and password arent found.
 
-  Axios.defaults.withCredentials = true;
+  //Axios.defaults.withCredentials = true;
 
-  const register = () => {     //function so that when user registers, the details get posted to the backend using app.post("/register",...)
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-    var yyyy = today.getFullYear();
-    today = mm + '/' + dd + '/' + yyyy;
-    setDateReg(today);
-    Axios.post("http://localhost:3001/register", {
-      username: usernameReg,    //pass these to the backend.
-      password: passwordReg,
-      name: nameReg,
-      email:emailReg,
-      country: countryReg,
-      date: dateReg,
-    }).then((response) => {
-      console.log(response);
-    });
-  };
+  const register = async () => {     //function so that when user registers, the details get posted to the backend using app.post("/register",...)
+    try {
+      var today = new Date();
+      var dd = String(today.getDate()).padStart(2, '0');
+      var mm = String(today.getMonth() + 1).padStart(2, '0'); 
+      var yyyy = today.getFullYear();
+      today = mm + ' ' + dd + ',' + yyyy;
+      setDateReg(today);
 
-  const login = () => {
-    Axios.post("http://localhost:3001/login", { //will check if the credentials are met
-      username: username,     //pass these to the backend.
-      password: password,
-    }).then((response) => {
-      if (response.data.message) {  
-        setLoginStatus(response.data.message);   //the backend will return a message if the credentials arent met.
-      } else {
-        setLoginStatus(response.data[0].username);   //maybe change this to redirect to another page.
+      const body ={
+        username: usernameReg,    //pass these to the backend.
+        password: passwordReg,
+        firstname: firstnameReg,
+        lastname: lastnameReg,
+        email:emailReg,
+        country: countryReg,
+        date: dateReg,
       }
-    });
+
+      const response = await fetch("http://localhost:3001/register",{
+        method: "POST",
+        headers: {'Content-Type': "application/json"},
+        body: JSON.stringify(body)
+      });
+
+      console.log(response);
+    } catch (err) {
+        console.error(err.message);
+    }
   };
+
+  const login = async () => {
+    try{
+    const body={
+      username:username,
+      password:password
+    }
+    const response = await fetch("http://localhost:3001/login",{
+      method: "POST",
+      headers: {'Content-Type': "application/json"},
+      body: JSON.stringify(body)
+    })
+    console.log(response);
+  }catch(err){
+    console.error(err);
+  }
+};
 
   return (
 
@@ -99,11 +116,18 @@ export default function Registration() {
             setUsernameReg(e.target.value);
           }}
         />
-        <label>Name</label>
+        <label>First Name</label>
         <input
           type="text"
           onChange={(e) => {
-            setNameReg(e.target.value);
+            setFirstNameReg(e.target.value);
+          }}
+        />
+        <label>Last Name</label>
+        <input
+          type="text"
+          onChange={(e) => {
+            setLastNameReg(e.target.value);
           }}
         />
         <label>Password</label>

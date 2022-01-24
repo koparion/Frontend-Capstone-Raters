@@ -3,6 +3,7 @@
 }
 .bod{
     background-image: url("https://t3.ftcdn.net/jpg/03/23/88/08/360_F_323880864_TPsH5ropjEBo1ViILJmcFHJqsBzorxUB.jpg");
+    
 }
 
 label{
@@ -13,7 +14,7 @@ h1{
 }
 
 .header{
-    height:100px;
+    height:75px;
     width:400%;
     display:block;
     background-image: url("https://i.pinimg.com/originals/52/ce/6d/52ce6dc7b15565f9f115fae3f6437de5.jpg");
