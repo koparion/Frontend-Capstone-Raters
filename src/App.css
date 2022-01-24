@@ -9,6 +9,19 @@
   align-items: center;
 }
 
+@keyframes App-logo-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
 input {
   width: 250px;
   height: 40px;
