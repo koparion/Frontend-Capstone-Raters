@@ -1,6 +1,7 @@
-const GameDetails = (props) => {
+const GameDetails = ( props ) => {
 
-    const { game } = props.location.gameProps
+    console.log(props.location);
+    const { game } = props;
   
     return (
       <div>
@@ -11,7 +12,7 @@ const GameDetails = (props) => {
           { 
             game.genres.map(g => `${g.name} | `)
           }
-  
+
         <h3>Platform(s):</h3>
           { 
             game.platforms.map(p => `${p.platform.name} | `)
@@ -27,7 +28,3 @@ const GameDetails = (props) => {
   }
   
   export default GameDetails;
-  
-  
-  
-  

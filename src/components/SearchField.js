@@ -14,7 +14,7 @@ const SearchField = () => {
     event.preventDefault()
     let slug = searchTerm.split(' ').join('-').toLowerCase()
 
-    //setGameResults([])
+    setGameResults([])
     fetch(`https://rawg.io/api/games?search=${slug}&key=8168270edeb44316bc96ab82242e931d`)
     .then(response => response.json())
     .then(({results}) => {
