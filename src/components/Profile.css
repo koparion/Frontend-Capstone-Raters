@@ -1,5 +1,5 @@
 body {
-    background-color: ivory;
+    background-image: url("https://t3.ftcdn.net/jpg/02/87/29/60/360_F_287296053_WZ0bPnX9HzdYdacavH0dUTAvagF1qp7D.jpg");
 }
 
 .text_h1 {
@@ -10,4 +10,15 @@ body {
     width: 150px;
     height: 150px;
 
+}
+
+.t_color {
+    color: white;
+}
+
+.background {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 30px;
 }
