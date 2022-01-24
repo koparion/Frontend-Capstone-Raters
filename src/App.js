@@ -3,7 +3,7 @@ import { Counter } from './features/counter/Counter';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Home from './components/Home';
 import UserProfile from './components/Profile';
-import LogIn from './components/Registration';
+import Registration from './components/Registration';
 import Trending from './components/Trending'
 import './App.css';
 
