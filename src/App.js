@@ -12,9 +12,9 @@ function App() {
       <div className="App">
         <NavBar />
         <Routes>
-          <Route path='/topgames' component={TopGames} />
-          <Route path='/searchfield' component={SearchField} />
-          <Route path='/game/:name' component={GameDetails} />
+          <Route path='/topgames' element={<TopGames />} />
+          <Route path='/searchfield' element={<SearchField />} />
+          <Route path='/game/:name' element={<GameDetails />} />
         </Routes>
       </div>
     </Router>
