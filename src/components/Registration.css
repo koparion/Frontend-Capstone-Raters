@@ -1,0 +1,38 @@
+.App {
+    background-color:#303030;
+}
+.bod{
+    background-image: url("https://t3.ftcdn.net/jpg/03/23/88/08/360_F_323880864_TPsH5ropjEBo1ViILJmcFHJqsBzorxUB.jpg");
+    
+}
+
+label{
+    color:white;
+}
+h1{
+    color:white;
+}
+
+.header{
+    height:75px;
+    width:400%;
+    display:block;
+    background-image: url("https://i.pinimg.com/originals/52/ce/6d/52ce6dc7b15565f9f115fae3f6437de5.jpg");
+    position: relative;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:1;
+    background-repeat: repeat-x;
+    animation: mymove 5s linear infinite;
+}
+@keyframes mymove{
+    100%{
+        transform:translateX(-2000px);
+    }
+}
+.footer{
+    height:100px;
+    background-image: url("https://miro.medium.com/max/5120/1*ZbZYU4Mfq0HBnbyHxWlMtA.png");
+    background-size:350px;
+}
