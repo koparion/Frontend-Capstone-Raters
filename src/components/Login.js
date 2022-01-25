@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Navigate} from 'react-router-dom'
 import Home from './Home';
+import axios from 'axios';
 
 
 function Login(props) {
@@ -18,16 +19,27 @@ function Login(props) {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(body),
-          },
-         
-          );
-          setLockin(true); // making the page visible
+          });
+        //   setLockin(true); // making the page visible
           setRedirect(true);
           console.log(response);
 
         } catch (err) {
           console.error(err);
         }
+        // try{
+        //     axios.post(`http://localhost:5000/login/${user}`,{
+        //         username: user,
+        //         password: password,
+        //     }).then((response)=>{
+        //         console.log(response);
+        //         setRedirect(true);
+        //         setLockin(true); // making the page visible
+        //     })
+        // }catch(err)
+        // {
+        //     console.error(err.message);
+        // }
       };
 
       if (redirect) {

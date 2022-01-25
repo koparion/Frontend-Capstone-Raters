@@ -40,7 +40,7 @@ const Profile = () => {
   </form> */}
       </nav>
   <div className="profile">
-      <h1 className=" container text-center text_h1"> Profile </h1>
+      <h1 className=" container text-center text_h1 text-capitalize"> Meet your fellow users </h1>
       <div className="text-center">
         <img
           src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"

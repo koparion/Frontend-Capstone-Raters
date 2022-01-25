@@ -18,12 +18,12 @@ function App() {
       <Router>
         <Routes>
           {/* Change the paths to the right user */}
-        {lockin && <Route path = "/Home" element = {<Home />}/>}
+        <Route path = "/Home" element = {<Home />}/>
         <Route path = "/" element = {<Welcome />}/>
-        {lockin && <Route path = "/profile" element = {<Profile/>}/>}
-        <Route path = "/login" element = {<Login  setLockin={setLockin}/>}/>
+        <Route path = "/profile" element = {<Profile/>}/>
+        <Route path = "/login" element = {<Login />}/>
         <Route path="/register" exact element={<Registration setLockin={setLockin}/>} />
-        {lockin && <Route path = "/trending" element = {<Trending />}></Route>}
+        <Route path = "/trending" element = {<Trending />}></Route>
         </Routes>
     </Router>
     {/* <div className="footer mt-5">
