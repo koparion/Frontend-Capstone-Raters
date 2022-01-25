@@ -13,7 +13,7 @@ import GameDetails from "./components/GameDetails";
 
 
 function App() {
-  const [lockin, setLockin] = useState(false); //preventing page viewing without login
+  // const [lockin, setLockin] = useState(false); //preventing page viewing without login
   return (
 
     <div className="App">
@@ -25,7 +25,7 @@ function App() {
         <Route path = "/" element = {<Welcome />}/>
         <Route path = "/profile" element = {<Profile/>}/>
         <Route path = "/login" element = {<Login />}/>
-        <Route path="/register" exact element={<Registration setLockin={setLockin}/>} />
+        <Route path="/register" exact element={<Registration />} />
         <Route path = "/trending" element = {<Trending />}></Route>
         <Route path='/topgames' element={<TopGames />} />
         <Route path='/searchfield' element={<SearchField />} />

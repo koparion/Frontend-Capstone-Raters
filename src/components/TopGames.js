@@ -17,7 +17,7 @@ const TopGames = () => {
   }
 
   return (
-    <div>
+    <div className='mt-4 bod'>
       <ul>
       {
         games.map(game => (

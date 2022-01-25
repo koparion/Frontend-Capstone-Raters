@@ -5,6 +5,7 @@ const Results = (props) => {
 
   return (
     <div className="results-container">
+       <div class="bod">
       <ul>
       {
         props.gameResults.map(game => (
@@ -24,6 +25,7 @@ const Results = (props) => {
         ))
       }
       </ul>
+      </div>
     </div>
   );
 }

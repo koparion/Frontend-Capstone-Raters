@@ -47,7 +47,7 @@ export default function Registration(props) {
       
       });
       console.log(response);
-      setLockin(true); // making the page visible
+      // setLockin(true); // making the page visible
       setRedirect(true); // redirects
     } catch (err) {
       console.error(err.message);
@@ -57,7 +57,7 @@ export default function Registration(props) {
   if (redirect) {
     return (
       <>
-        <Navigate to={"/Home"} />
+        <Navigate to={"/profile"} />
       </>
     );
   }
@@ -78,7 +78,7 @@ export default function Registration(props) {
        
         <br />
 <div className="container">
-        <form className="row g-3 bg-dark">
+        <form onSubmit={register} className="row g-3 bg-dark">
   <div className="col-md-4">
     <label htmlFor="validationDefault01" className="form-label">Email</label>
     <input  onChange={(e) => {
@@ -96,7 +96,7 @@ export default function Registration(props) {
   </div>
   <div className="col-md-4">
     <label htmlFor="validationDefault02" className="form-label">Password</label>
-    <input onChange={(e) => {
+    <input type="password" onChange={(e) => {
               setPasswordReg(e.target.value);
             }} type="text" className="form-control" id="validationDefault02"  required/>
   </div>
@@ -115,8 +115,8 @@ export default function Registration(props) {
             }} type="text" className="form-control" id="validationDefault05" required/>
   </div>
   <div className="col-md-4">
-    <label onSelect={e => {setCountryReg(e.target.value)}} htmlFor="validationDefault04" className="form-label">Country</label>
-    <select className="form-select form-control" id="validationDefault04" required>
+    <label htmlFor="validationDefault04" className="form-label">Country</label>
+    <select onChange={e => {setCountryReg(e.target.value)}} value={countryReg} className="form-select form-control" id="validationDefault04" required>
 
                 <option value="Afghanistan">Select Country</option>
                 <option value="Afghanistan">Afghanistan</option>
