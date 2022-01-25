@@ -15,7 +15,7 @@ h1{
 
 .header{
     height:75px;
-    width:400%;
+    width:100%;
     display:block;
     background-image: url("https://i.pinimg.com/originals/52/ce/6d/52ce6dc7b15565f9f115fae3f6437de5.jpg");
     position: relative;
@@ -28,7 +28,7 @@ h1{
 }
 @keyframes mymove{
     100%{
-        transform:translateX(-2000px);
+        transform:translateX(-20px);
     }
 }
 .footer{

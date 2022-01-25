@@ -1,27 +1,35 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Counter } from './features/counter/Counter';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Home from './components/Home';
 import UserProfile from './components/Profile';
 import Registration from './components/Registration';
+import Login from './components/Login';
 import Trending from './components/Trending'
+import Welcome from './components/Welcome';
 import './App.css';
 
 function App() {
+  const [lockin, setLockin] = useState(false); //preventing page viewing without login
   return (
     <div className="App">
 
       <Router>
         <Routes>
           {/* Change the paths to the right user */}
-        <Route path = "/" element = {<Home />}/>
+        <Route path = "/Home" element = {<Home />}/>
+        <Route path = "/" element = {<Welcome />}/>
         <Route path = "/profile" element = {<UserProfile />}/>
-        {/* <Route path = "/login" element = {<LogIn/>}/> */}
-        <Route path="/login" exact element={<Registration />} />
+        <Route path = "/login" element = {<Login setLockin={setLockin}/>}/>
+        <Route path="/register" exact element={<Registration setLockin={setLockin}/>} />
         <Route path = "/trending" element = {<Trending />}></Route>
         </Routes>
     </Router>
-
+    {/* <div className="footer mt-5">
+        <hr />
+        <h1>Raters</h1>
+        <br />
+      </div> */}
     </div>
   )
 }

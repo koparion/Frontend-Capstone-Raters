@@ -1,13 +1,17 @@
 .App {
   text-align: center;
+  
+}
+body{
+  background-image: url("https://t3.ftcdn.net/jpg/03/23/88/08/360_F_323880864_TPsH5ropjEBo1ViILJmcFHJqsBzorxUB.jpg");
 }
 
-.registration, .login {
+/* .registration, .login {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
 
 @keyframes App-logo-float {
   0% {
@@ -25,4 +29,10 @@
 input {
   width: 250px;
   height: 40px;
+}
+
+.footer{
+  height:100px;
+  background-image: url("https://miro.medium.com/max/5120/1*ZbZYU4Mfq0HBnbyHxWlMtA.png");
+  background-size:350px;
 }
