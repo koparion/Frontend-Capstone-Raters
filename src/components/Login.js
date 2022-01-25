@@ -8,7 +8,6 @@ function Login(props) {
     const [password, setPassword] = useState("");
     const [redirect, setRedirect] = useState(false);
     const {setLockin} = props;
-    
     const login = async () => {
         try {
           const body = {
