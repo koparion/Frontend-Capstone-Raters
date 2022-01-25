@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import Axios from "axios";
+import { Navigate } from "react-router-dom"
 import './Registration.css';
 import "../App.css";
 
@@ -15,7 +16,7 @@ export default function Registration() {
   const [username, setUsername] = useState(""); //will hold the username and password for the login. will be checked in the login function.
   const [password, setPassword] = useState("");
 
-  const [loginStatus, setLoginStatus] = useState("");   //will be used to hold a message that is returned from the backend if username and password arent found.
+  const [loggedin, setLoggedIn] = useState(false);   //will be used to hold a message that is returned from the backend if username and password arent found.
 
   //Axios.defaults.withCredentials = true;
 
@@ -43,7 +44,6 @@ export default function Registration() {
         headers: {'Content-Type': "application/json"},
         body: JSON.stringify(body)
       });
-
       console.log(response);
     } catch (err) {
         console.error(err.message);
@@ -56,17 +56,26 @@ export default function Registration() {
       username:username,
       password:password
     }
+
     const response = await fetch("http://localhost:3001/login",{
       method: "POST",
       headers: {'Content-Type': "application/json"},
       body: JSON.stringify(body)
     })
+    setLoggedIn(true);
     console.log(response);
   }catch(err){
     console.error(err);
   }
 };
 
+if(loggedin){
+  return(
+    <Fragment>
+      <Navigate to="/" /> {/* navigate to home page.*/}
+    </Fragment>
+  )
+}
   return (
 
     <div className="App">
@@ -98,7 +107,7 @@ export default function Registration() {
         <button onClick={login}> Sign In </button>
       </div>
      
-      <h1>{loginStatus}</h1>
+      <h1>{loggedin}</h1>
 
       <div className="registration">
         <h1>Don't have an account yet? Register here</h1>
