@@ -18,10 +18,13 @@ function Login(props) {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(body),
-          });
-          console.log(response);
-          setRedirect(true);
+          },
+         
+          );
           setLockin(true); // making the page visible
+          setRedirect(true);
+          console.log(response);
+
         } catch (err) {
           console.error(err);
         }
@@ -30,7 +33,7 @@ function Login(props) {
       if (redirect) {
         return (
           <>
-            <Navigate to={"/Profile"} />
+            <Navigate to={"/profile"} />
           </>
         );
       }
