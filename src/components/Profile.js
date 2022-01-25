@@ -36,7 +36,7 @@ const Profile = () => {
             
                 
                 {users.map((u) => (
-                    <ul className="list-group list-group-flush" key={u.id}>
+                    <ul className="list-group list-group-flush p-5" key={u.id}>
                         <li className="list-group-item background">Name: {u.firstname} {u.lastname}</li>
                         <li className="list-group-item background">UserName: {u.username}</li>
                         <li className="list-group-item background">Country: {u.country} </li>
