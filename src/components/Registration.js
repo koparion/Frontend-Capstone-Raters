@@ -64,78 +64,60 @@ export default function Registration(props) {
   
   return (
     <div className="container bod mt-5">
-      {/* <div className="temp">
+       <div className="temp">
         <div className="header">
           <br />
           <h1> </h1>
           <br />
         </div>
-      </div> */}
+      </div> 
 
       
       <div className="d-flex justify-content-center">
         
-        {/* <h1>{loginStatus}</h1> */}
-      <form className="row justify-content-start bg-dark">
-        <div className="col-md-12 registration container mt-5 ">
-          <h1>Don't have an account yet? Register here</h1>
-          <label className="mt-4 col-6 ms-auto">Email<span style={{color: "red"}}>*</span></label>
-          <input className="form-control"
-            type="text"
-            placeholder="email@domain.com"
-            onChange={(e) => {
+       
+        <br />
+<div className="container">
+        <form className="row g-3 bg-dark">
+  <div className="col-md-4">
+    <label htmlFor="validationDefault01" className="form-label">Email</label>
+    <input  onChange={(e) => {
               setEmailReg(e.target.value);
-            }}
-          />
-          <div className="col-4 ms-auto p-0 text-center" style={{position: "absolute",top: "37%", left: "50%"}}>
-          <label>Username<span style={{color: "red"}}>*</span></label>
-          <input
-          className="form-control"
-            type="text"
-            onChange={(e) => {
+            }} placeholder="email@domain.com" type="text" className="form-control" id="validationDefault01"  required/>
+  </div>
+  <div className="col-md-4">
+    <label htmlFor="validationDefaultUsername" className="form-label">Username</label>
+    <div className="input-group">
+      <span className="input-group-text" id="inputGroupPrepend2">@</span>
+      <input onChange={(e) => {
               setUsernameReg(e.target.value);
-            }}
-          />
-          </div>
-          <div className="col-4 ms-auto col-md-offset-4" style={{position: "absolute",top: "55%", left: "50%"}}>
-          <label>Password<span style={{color: "red"}}>*</span></label>
-          <input
-          className="form-control"
-            type="text"
-            onChange={(e) => {
+            }} type="text" className="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required/>
+    </div>
+  </div>
+  <div className="col-md-4">
+    <label htmlFor="validationDefault02" className="form-label">Password</label>
+    <input onChange={(e) => {
               setPasswordReg(e.target.value);
-            }}
-          />
-          </div>
-          <div className="col-md-4">
-          <label>First Name<span style={{color: "red"}}>*</span></label>
-          <input
-            type="text"
-            onChange={(e) => {
+            }} type="text" className="form-control" id="validationDefault02"  required/>
+  </div>
+  
+  <div className="col-md-6">
+    <label htmlFor="validationDefault03" className="form-label">First Name</label>
+    <input onChange={(e) => {
               setFirstNameReg(e.target.value);
-            }}
-          />
-          </div>
-          <div className="col-md-4">
-          <label>Last Name<span style={{color: "red"}}>*</span></label>
-          <input
-            type="text"
-            onChange={(e) => {
+            }} type="text" className="form-control" id="validationDefault03" required/>
+  </div>
+  
+  <div className="col-md-6 align-items-end">
+    <label htmlFor="validationDefault05" className="form-label">Last Name</label>
+    <input onChange={(e) => {
               setLastNameReg(e.target.value);
-            }}
-          />
-          </div>
-          {/* <label>Country</label> */}
-          {/* <input
-            type="text"
-            onChange={(e) => {
-              setCountryReg(e.target.value);
-            }}
-          /> */}
-          {/* took the country list from https://gist.github.com/danrovito/977bcb97c9c2dfd3398a */}
-          <div className="col-md-5">
-          <label onSelect={e => {setCountryReg(e.target.value)}} htmlFor="country">Country<span style={{color: "red"}}>*</span></label>
-            <select id="country" name="country" className="form-control col-12">
+            }} type="text" className="form-control" id="validationDefault05" required/>
+  </div>
+  <div className="col-md-4">
+    <label onSelect={e => {setCountryReg(e.target.value)}} htmlFor="validationDefault04" className="form-label">Country</label>
+    <select className="form-select form-control" id="validationDefault04" required>
+
                 <option value="Afghanistan">Select Country</option>
                 <option value="Afghanistan">Afghanistan</option>
                 <option value="Åland Islands">Åland Islands</option>
@@ -381,12 +363,15 @@ export default function Registration(props) {
                 <option value="Yemen">Yemen</option>
                 <option value="Zambia">Zambia</option>
                 <option value="Zimbabwe">Zimbabwe</option>
-            </select>
-            </div>
-          <button className="btn btn-light mt-2" onClick={register}> Register </button>
-        </div>
-        </form>
-        <br />
+            
+            
+    </select>
+  </div>
+  <div className="col-12">
+    <button className="btn btn-light mt-2" type="submit">Submit form</button>
+  </div>
+</form>
+</div>
         <br />
       </div>
       

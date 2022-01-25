@@ -6,7 +6,7 @@ function Welcome() {
 
   return <div className='bod'>
       <h1 className='text-white'>Welcome</h1>
-      <h3 className='text-white'>Please sign or register in below to continue.</h3>  
+      <h3 className='text-white text-capitalize'>Please sign in OR register below to continue.</h3>  
   <div>
   <Login/>
   <Registration />
