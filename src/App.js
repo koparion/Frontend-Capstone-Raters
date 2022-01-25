@@ -7,6 +7,9 @@ import Login from './components/Login';
 import Trending from './components/Trending'
 import Welcome from './components/Welcome';
 import Profile from './components/Profile';
+import TopGames from "./components/TopGames";
+import SearchField from "./components/SearchField";
+import GameDetails from "./components/GameDetails";
 
 
 function App() {
@@ -24,6 +27,9 @@ function App() {
         <Route path = "/login" element = {<Login />}/>
         <Route path="/register" exact element={<Registration setLockin={setLockin}/>} />
         <Route path = "/trending" element = {<Trending />}></Route>
+        <Route path='/topgames' element={<TopGames />} />
+        <Route path='/searchfield' element={<SearchField />} />
+        <Route path='/game/:name' element={<GameDetails />} />
         </Routes>
     </Router>
     {/* <div className="footer mt-5">
@@ -36,3 +42,5 @@ function App() {
 }
 
 export default App;
+
+
