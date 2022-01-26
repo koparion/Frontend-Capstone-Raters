@@ -7,7 +7,6 @@ import {
   Navigate,
   NavLink,
 } from "react-router-dom";
-import DisplayGameDetails from "./DisplayGameDetails";
 import GameDetails from "./GameDetails";
 
 const TopGames = () => {
