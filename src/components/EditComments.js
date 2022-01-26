@@ -1,3 +1,4 @@
+import axios from "axios";
 import React,{Fragment, useState} from "react";
 
 
@@ -13,7 +14,7 @@ const EditComment = ({comList}) => {
         e.preventDefault()
         try {
             const body = {description}
-            const response = await fetch(`http://localhost:5000/comments${comList.id}`,
+            const response = await fetch(`http://localhost:5000/comments/${comList.id}`,
             {
                 method: "PUT",
                 headers:{"Content-Type":
@@ -36,7 +37,7 @@ const EditComment = ({comList}) => {
 </button>
 
 {/* <!-- Modal --> */}
-<div className="modal fade" id = {`id${comList.id }`} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"onClick={() => setDescription (comList.description)}>
+<div className="modal fade" id = {`id${comList.id}`} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"onClick={() => setDescription (comList.description)}>
   <div className="modal-dialog">
     <div className="modal-content">
       <div className="modal-header">
