@@ -24,7 +24,7 @@ const Profile = () => {
   return (
     <Fragment>
       <nav className="navbar navbar-expand-lg navbar-light bg-dark justify-content-between">
-      <a class="navbar-brand text-white" href="./trending"><span><h1>Raters</h1></span></a>
+      <a className="navbar-brand text-white" href="./trending"><span><h1>Raters</h1></span></a>
         <ul className="navbar-nav">
           {/* <Link className='nav-item btn btn-dark' to="/logIn">Login</Link> */}
           <Link className="nav-item btn btn-dark active" to="/profile">
@@ -36,6 +36,9 @@ const Profile = () => {
           <Link className='nav-item btn btn-dark' to={'/searchfield'}>
         <li>Search</li>
         </Link>
+        <Link className='nav-item btn btn-dark' to="/comments">
+          Comments
+          </Link>
         </ul>
         {/* <form className ="form-inline">
     <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>

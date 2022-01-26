@@ -11,7 +11,7 @@ const Trending = () =>
     return(
         <Fragment>
             <nav className="navbar nav-tabs navbar-expand-lg navbar-light bg-dark justify-content-between">
-            <a class="navbar-brand text-white" href="./trending"><span><h1>Raters</h1></span></a>
+            <a className="navbar-brand text-white" href="./trending"><span><h1>Raters</h1></span></a>
         <ul className='navbar-nav '>
            {/* <li className='nav-item'> <Link to="/logIn" >Login</Link></li> */}
            <Link className='nav-item btn btn-dark' to="/profile">Profile</Link>
@@ -19,6 +19,7 @@ const Trending = () =>
            <Link className='nav-item btn btn-dark' to={'/searchfield'}>
         <li>Search</li>
         </Link>
+        <Link className='nav-item btn btn-dark' to="/comments">Comments</Link>
             </ul>
            
             {/* <form className ="form-inline">

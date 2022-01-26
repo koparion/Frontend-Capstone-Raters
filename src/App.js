@@ -10,6 +10,7 @@ import Profile from './components/Profile';
 import TopGames from "./components/TopGames";
 import SearchField from "./components/SearchField";
 import GameDetails from "./components/GameDetails";
+import Comment from './components/Comment';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path='/topgames' element={<TopGames />} />
         <Route path='/searchfield' element={<SearchField />} />
         <Route path='/game/:name' element={<GameDetails />} />
+        <Route path = '/comments' element = {<Comment/>} />
         </Routes>
     </Router>
     {/* <div className="footer mt-5">

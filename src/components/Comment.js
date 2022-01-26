@@ -1,4 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
+import {Link} from 'react-router-dom';
 import axios from "axios";
 import "./Comment.css";
 import EditComment from "./EditComments";
@@ -52,6 +53,19 @@ const CommentList = () => {
 
   return (
     <Fragment>
+<nav className="navbar nav-tabs navbar-expand-lg navbar-light bg-dark justify-content-between">
+            <a className="navbar-brand text-white" href="./trending"><span><h1>Raters</h1></span></a>
+        <ul className='navbar-nav '>
+           {/* <li className='nav-item'> <Link to="/logIn" >Login</Link></li> */}
+           <Link className='nav-item btn btn-dark' to="/profile">Profile</Link>
+           <Link className='nav-item btn btn-dark active text-color-green' aria-current="page" to="/trending">Trending</Link>
+           <Link className='nav-item btn btn-dark' to={'/searchfield'}>
+        <li>Search</li>
+        </Link>
+        <Link className='nav-item btn btn-dark' to="/comments">Comments</Link>
+            </ul>
+</nav>
+
       <div>
         <div className="container mt-3">
           <div className="row d-flex mt-5 justify-content-center"></div>
