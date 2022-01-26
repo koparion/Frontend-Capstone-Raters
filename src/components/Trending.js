@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import {Link} from 'react-router-dom';
+import GameDetails from './GameDetails';
 import NavBar from './NavBar';
 import SearchField from './SearchField';
 import TopGames from './TopGames';

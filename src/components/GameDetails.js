@@ -1,32 +1,35 @@
 import React from "react";
+import { render } from "react-dom";
 
-const GameDetails = ( props ) => {
+function GameDetails ( props ) {
 
     console.log(props.location);
     const { game } = props;
-  
+
+    // React.useEffect(() =>{
+    //   game.window.location;
+    // })
+
     return (
       <div>
-        <h1>{game.name}</h1>
+        <h6 className="text-black">{game.name}</h6>
         <p>Released: {game.released}</p>
         <p>Rating: {game.rating}</p>
-        <h3>Genre(s):</h3>
+        <p>Genre(s):</p>
           { 
             game.genres.map(g => `${g.name} | `)
           }
 
-        <h3>Platform(s):</h3>
+        <p>Platform(s):</p>
           { 
             game.platforms.map(p => `${p.platform.name} | `)
           }
-  
         <ul>
           {
-            game.short_screenshots.map(ss => <li><img src={ss.image} alt='screenshot'></img></li>)
+            // game.short_screenshots.map(ss => <li><img src={ss.image} alt='screenshot'></img></li>)
           }
         </ul>
       </div>
     );
-  }
-  
+  };
   export default GameDetails;

@@ -31,7 +31,7 @@ const SearchField = () => {
     <div className="game-search">
       <nav className="navbar nav-tabs navbar-expand-lg navbar-light bg-dark justify-content-between">
         {/* <Link className='d-flex display-3 ' to={'/trending'}>Raters</Link> */}
-        <a class="navbar-brand text-white" href="./trending">
+        <a className="navbar-brand text-white" href="./trending">
           <span>
             <h1>Raters</h1>
           </span>
