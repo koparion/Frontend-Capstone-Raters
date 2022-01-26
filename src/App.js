@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Counter } from './features/counter/Counter';
 import {BrowserRouter as Router, Route, Routes, Navigate} from 'react-router-dom';
 import Home from './components/Home';
@@ -10,12 +10,20 @@ import Profile from './components/Profile';
 import TopGames from "./components/TopGames";
 import SearchField from "./components/SearchField";
 import GameDetails from "./components/GameDetails";
+import Loading from './components/Loading';
 
 
 function App() {
   // const [lockin, setLockin] = useState(false); //preventing page viewing without login
-  return (
+  const [loading, setLoading] = useState(true)
 
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 6000)
+  }, [])
+
+  return (
+    <>
+    {loading === false ? (
     <div className="App">
 
       <Router>
@@ -30,7 +38,6 @@ function App() {
           <Route path='/topgames' element={<TopGames />} />
           <Route path='/searchfield' element={<SearchField />} />
           <Route path='/game/:name' element={<GameDetails />} />
-  
         </Routes>
      </Router>
     {/* <div className="footer mt-5">
@@ -39,7 +46,11 @@ function App() {
         <br />
       </div> */}
     </div>
-  )
+     ): (
+      <Loading />
+    )}
+    </>
+  ); 
 }
 
 export default App;
