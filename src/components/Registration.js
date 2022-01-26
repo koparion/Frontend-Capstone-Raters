@@ -5,6 +5,7 @@ import "../App.css";
 import { set } from "date-fns";
 import { Navigate } from "react-router-dom";
 import Home from "./Home";
+import "./Text.css"
 
 export default function Registration(props) {
   const [usernameReg, setUsernameReg] = useState(""); //states that will store all registered information
@@ -88,7 +89,7 @@ export default function Registration(props) {
   <div className="col-md-4">
     <label htmlFor="validationDefaultUsername" className="form-label">Username</label>
     <div className="input-group">
-      <span className="input-group-text" id="inputGroupPrepend2">@</span>
+      <span className="input-group-text" id="inputGroupPrepend2"></span>
       <input onChange={(e) => {
               setUsernameReg(e.target.value);
             }} type="text" className="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required/>

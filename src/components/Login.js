@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Navigate} from 'react-router-dom'
 import Home from './Home';
 import axios from 'axios';
-
+import "./Text.css";
 
 function Login(props) {
     const [username, setUsername] = useState(""); //will hold the username and password for the login. will be checked in the login function.
@@ -54,14 +54,14 @@ function Login(props) {
           <h1>Sign In</h1>
           <input
             type="text"
-            placeholder="username..."
+            placeholder="Username"
             onChange={(e) => {
               setUsername(e.target.value);
             }}
           />
           <input
             type="password"
-            placeholder="password..."
+            placeholder="Password"
             onChange={(e) => {
               setPassword(e.target.value);
             }}

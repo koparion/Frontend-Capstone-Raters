@@ -18,6 +18,7 @@
 
 }
 .border{
+    font-family:Georgia, 'Times New Roman', Times, serif;
     background: radial-gradient(#ffffff, #b2bfd1);
     width: auto;
 }
