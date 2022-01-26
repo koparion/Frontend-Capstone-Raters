@@ -368,7 +368,7 @@ export default function Registration(props) {
     </select>
   </div>
   <div className="col-12">
-    <button className="btn btn-light mt-2" type="submit">Submit form</button>
+    <button className="btn btn-light mt-2" type="submit">Register</button>
   </div>
 </form>
 </div>
