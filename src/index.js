@@ -10,7 +10,7 @@ import Comment from './components/Comment'
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Comment />
+      <App />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
