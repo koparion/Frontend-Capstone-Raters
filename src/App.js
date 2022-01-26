@@ -9,7 +9,7 @@ import Welcome from './components/Welcome';
 import Profile from './components/Profile';
 import TopGames from "./components/TopGames";
 import SearchField from "./components/SearchField";
-import GameDetails from "./components/GameDetails";
+import Game from "./components/Game";
 
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
         <Route path = "/trending" element = {<Trending />}></Route>
         <Route path='/topgames' element={<TopGames />} />
         <Route path='/searchfield' element={<SearchField />} />
-        <Route path='/game/:name' element={<GameDetails />} />
+        <Route path='/game/:name' element={<Game />} />
         </Routes>
     </Router>
     {/* <div className="footer mt-5">

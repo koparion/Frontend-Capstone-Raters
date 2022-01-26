@@ -1,6 +1,6 @@
 import React from "react";
 
-const GameDetails = ( props ) => {
+const Game = ( props ) => {
 
     console.log(props.location);
     const { game } = props;
@@ -29,4 +29,4 @@ const GameDetails = ( props ) => {
     );
   }
   
-  export default GameDetails;
+  export default Game;
