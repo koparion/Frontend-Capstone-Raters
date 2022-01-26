@@ -58,4 +58,4 @@ const EditComment = ({comList}) => {
     )
 }
 
-export default EditComment
+export default EditComment;
