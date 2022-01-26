@@ -24,7 +24,7 @@ const Profile = () => {
   return (
     <Fragment>
       <nav className="navbar navbar-expand-lg navbar-light bg-dark justify-content-between">
-      <a class="navbar-brand text-white" href="./trending"><span><h1>Raters</h1></span></a>
+      <a className="navbar-brand text-white" href="./trending"><span><h1>Raters</h1></span></a>
         <ul className="navbar-nav">
           {/* <Link className='nav-item btn btn-dark' to="/logIn">Login</Link> */}
           <Link className="nav-item btn btn-dark active" to="/profile">

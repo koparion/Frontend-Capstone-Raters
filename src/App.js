@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Counter } from './features/counter/Counter';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes, Navigate} from 'react-router-dom';
 import Home from './components/Home';
 import Registration from './components/Registration';
 import Login from './components/Login';
@@ -20,18 +20,19 @@ function App() {
 
       <Router>
         <Routes>
-          {/* Change the paths to the right user */}
-        <Route path = "/Home" element = {<Home />}/>
-        <Route path = "/" element = {<Welcome />}/>
-        <Route path = "/profile" element = {<Profile/>}/>
-        <Route path = "/login" element = {<Login />}/>
-        <Route path="/register" exact element={<Registration />} />
-        <Route path = "/trending" element = {<Trending />}></Route>
-        <Route path='/topgames' element={<TopGames />} />
-        <Route path='/searchfield' element={<SearchField />} />
-        <Route path='/game/:name' element={<GameDetails />} />
+            {/* Change the paths to the right user */}
+          <Route path = "/Home" element = {<Home />}/>
+          <Route path = "/" element = {<Welcome />}/>
+          <Route path = "/profile" element = {<Profile/>}/>
+          <Route path = "/login" element = {<Login />}/>
+          <Route path="/register" exact element={<Registration />} />
+          <Route path = "/trending" element = {<Trending />}></Route>
+          <Route path='/topgames' element={<TopGames />} />
+          <Route path='/searchfield' element={<SearchField />} />
+          <Route path='/game/:name' element={<GameDetails />} />
+  
         </Routes>
-    </Router>
+     </Router>
     {/* <div className="footer mt-5">
         <hr />
         <h1>Raters</h1>
