@@ -59,7 +59,7 @@ const TopGames = () => {
                       </div>
                     </div>
                   </div>
-                  <div class="col">
+                  <div class="col mt-5 p-4">
                     <div class="border">
                       <GameDetails game={game} />
                     </div>
