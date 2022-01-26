@@ -9,7 +9,7 @@ const Results = (props) => {
       <ul>
       {
         props.gameResults.map(game => (
-          <li key={game.id}>
+          <li className="" key={game.id}>
 
             <Link to={{
               pathname: `/game/${game.name}`,
