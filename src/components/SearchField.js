@@ -47,6 +47,9 @@ const SearchField = () => {
           <Link className="nav-item btn btn-dark active" to={"/searchfield"}>
             <li>Search</li>
           </Link>
+          <Link className='nav-item btn btn-dark' to="/comments">
+            Comments
+            </Link>
         </ul>
 
         {/* <form className ="form-inline">

@@ -36,6 +36,9 @@ const Profile = () => {
           <Link className='nav-item btn btn-dark' to={'/searchfield'}>
         <li>Search</li>
         </Link>
+        <Link className='nav-item btn btn-dark' to="/comments">
+          Comments
+          </Link>
         </ul>
         {/* <form className ="form-inline">
     <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
