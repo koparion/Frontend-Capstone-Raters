@@ -1,0 +1,25 @@
+.card {
+    border:blanchedalmond;
+    border-spacing: 50px;
+    box-shadow: 5px 6px 6px 2px #6b6b6b;
+    border-radius: 30px;
+    width: 700px;
+}
+.icons i {
+    margin-left: 8px
+}
+.check-icon {
+    font-size: 17px;
+    color: #c3bfbf;
+    top: 1px;
+    position: relative;
+    margin-left: 3px
+}
+body{
+    background-color: red;
+}
+
+.btn
+{
+
+}
