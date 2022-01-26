@@ -1,0 +1,27 @@
+.card {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    max-width:100%;
+    height:auto;
+  }
+  .card:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+  }
+
+.p-3{
+    background: radial-gradient(#ffffff, #aac7f3);
+    width:auto;
+    justify-content: center;
+}
+.col{
+    justify-content: center;
+
+}
+.border{
+    background: radial-gradient(#ffffff, #b2bfd1);
+    width: auto;
+}
+
+.box{
+    justify-content: center;
+}

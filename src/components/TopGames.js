@@ -8,6 +8,7 @@ import {
   NavLink,
 } from "react-router-dom";
 import GameDetails from "./GameDetails";
+import "./GameCard.css";
 
 const TopGames = () => {
   useEffect(() => {
@@ -40,10 +41,10 @@ const TopGames = () => {
                 {/* <h3>{game.name}</h3>
                   <img src={game.background_image} alt="game" />
                 </NavLink> */}
-                <div class="row mx-md-n5">
-                  <div class="col px-md-5">
-                    <div class="p-3 border bg-light">
-                      <div class="card" style={{ width: "18rem" }}>
+                <div class="row">
+                  <div class="col">
+                    <div class="p-3">
+                      <div class="card">
                         <img
                           src={game.background_image}
                           alt="game"
@@ -58,8 +59,8 @@ const TopGames = () => {
                       </div>
                     </div>
                   </div>
-                  <div class="col px-md-5">
-                    <div class="border bg-light">
+                  <div class="col">
+                    <div class="border">
                       <GameDetails game={game} />
                     </div>
                   </div>
