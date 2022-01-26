@@ -66,7 +66,7 @@ function Login(props) {
               setPassword(e.target.value);
             }}
           />
-          <button className="btn" onClick={login}> Sign In </button>
+          <button className="btn" onClick={login}> Login </button>
 
         </div>
 

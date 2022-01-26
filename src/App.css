@@ -1,9 +1,9 @@
 .App {
   text-align: center;
-  
+  background-image: url("https://cdn.wallpapersafari.com/65/42/0GdVHI.jpg");
 }
 body{
-  background-image: url("https://t3.ftcdn.net/jpg/03/23/88/08/360_F_323880864_TPsH5ropjEBo1ViILJmcFHJqsBzorxUB.jpg");
+  background-image: url("https://i.pinimg.com/originals/de/fa/28/defa283a2b0cec1ebabede862375bfb6.jpg");
 }
 
 /* .registration, .login {
@@ -52,12 +52,12 @@ input {
 
 .footer{
   height:100px;
-  background-image: url("https://miro.medium.com/max/5120/1*ZbZYU4Mfq0HBnbyHxWlMtA.png");
-  background-size:350px;
+  background-color:222222;
+    background-size:350px;
 }
 
 div.profile {
-  background-image: url("https://t3.ftcdn.net/jpg/02/87/29/60/360_F_287296053_WZ0bPnX9HzdYdacavH0dUTAvagF1qp7D.jpg");
+  background-color:222222;
 }
 
 .text_h1 {
