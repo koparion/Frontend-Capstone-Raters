@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import GameDetails from './GameDetails';
+import "./GameCard.css";
+
 const Results = (props) => {
 
   return (
@@ -20,10 +22,10 @@ const Results = (props) => {
             </Link>
             <ul>
             </ul> */}
-                     <div class="row mx-md-n5">
-                  <div class="col px-md-5">
-                    <div class="p-3 border bg-light">
-                      <div class="card" style={{ width: "18rem" }}>
+                     <div class="row">
+                  <div class="col">
+                    <div class="card">
+                      <div class="card">
                         <img
                           src={game.background_image}
                           alt="game"
@@ -38,8 +40,8 @@ const Results = (props) => {
                       </div>
                     </div>
                   </div>
-                  <div class="col px-md-5">
-                    <div class="border bg-light">
+                  <div class="col">
+                    <div class="border">
                       <GameDetails game={game} />
                     </div>
                   </div>
