@@ -1,44 +1,74 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
-## Available Scripts
+# Raters
 
-In the project directory, you can run:
+A Web Application That Helps You Connect With Gaming Enthusiasts!
 
-### `npm start`
+## Description
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+in this app the user have to create a user account to start with. Then he is directing to the user profiles with al the users account in it. Then user can visit the trending page or search which game he want to know about. 
+He can comment to the games what he wants. 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
+## Key Features
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Find the tending games and top rated games.
+- Search the Games you want.
+- Add/Edit Comments. 
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage/Examples
 
-### `npm run eject`
+```javascript
+import Home from './components/Home';
+import Login from './components/Login';
+import Trending from './components/Trending'
+import TopGames from "./components/TopGames";
+import SearchField from "./components/SearchField";
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+function App() {
+  return (
+    <div className="App">
+      <Router>
+        <Routes>
+          {/* Change the paths to the right user */}
+        <Route path = "/Home" element = {<Home />}/>
+        <Route path = "/login" element = {<Login />}/>
+        <Route path = "/trending" element = {<Trending />}></Route>
+        <Route path='/topgames' element={<TopGames />} />
+        <Route path='/searchfield' element={<SearchField />} />
+        </Routes>
+    </Router>
+    </div>
+  )
+}
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Demo
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Tech Stack
+
+**Frontend:** JavaScript, React, Redux, CSS, HTML, Bootstrap
+
+**Backend:** Postman, PgAdmin, NodeJS, Express, SQL, Postgres
+
+
+
+
+
+
+
+## Contributors
+
+- [@koparion](https://github.com/koparion)
+- [@simonchrist](https://github.com/simonchrist)
+- [@jlorenzo58](https://github.com/jlorenzo58)
+- [@ChibuzorOkoye](https://github.com/ChibuzorOkoye)
+- [@Gihan1937](https://github.com/Gihan1937)
+

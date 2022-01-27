@@ -5,9 +5,9 @@ const Profile = () => {
 
     const [users, setUsers] = useState([]);
 
-    const getUser = async () => {
+    const getUser = async (id) => {
         try {
-            const response = await fetch("http://localhost:7200/users");
+            const response = await fetch(`http://localhost:7200/users/${id}`);
             const userData = await response.json();
 
             setUsers(userData);
