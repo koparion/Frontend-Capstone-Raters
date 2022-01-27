@@ -10,36 +10,36 @@ function Login(props) {
   console.log(props);
   const { setLockin } = props;
   const login = async () => {
-    // try {
-    //   const body = {
-    //     username: username,
-    //     password: password,
-    //   };
-    //   const response = await fetch(`https://capstoneapinodejs.herokuapp.com/login/${username}`, {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify(body),
-    //   });
-    //   setLockin(true); // making the page visible
-    //   setRedirect(true);
-    //   console.log(response);
-    // } catch (err) {
-    //   console.error(err);
-    // }
     try {
-      axios
-        .post(`https://capstoneapinodejs.herokuapp.com/login/${username}`, {
-          username: username,
-          password: password,
-        })
-        .then((response) => {
-          console.log(response);
-          setRedirect(true);
-          setLockin(true); // making the page visible
-        });
+      const body = {
+        username: username,
+        password: password,
+      };
+      const response = await fetch(`https://capstoneapinodejs.herokuapp.com/login/${username}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+      setLockin(true); // making the page visible
+      setRedirect(true);
+      console.log(response);
     } catch (err) {
-      console.error(err.message);
+      console.error(err);
     }
+    // try {
+    //   axios
+    //     .post(`https://capstoneapinodejs.herokuapp.com/login/${username}`, {
+    //       username: username,
+    //       password: password,
+    //     })
+    //     .then((response) => {
+    //       console.log(response);
+    //       setRedirect(true);
+    //       setLockin(true); // making the page visible
+    //     });
+    // } catch (err) {
+    //   console.error(err.message);
+    // }
   };
   const handleSubmit = (e) => {
     e.preventDefault();
