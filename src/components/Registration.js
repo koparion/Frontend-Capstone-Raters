@@ -58,7 +58,7 @@ export default function Registration(props) {
   if (redirect) {
     return (
       <>
-        <Navigate to={"/profile"} />
+        <Navigate to={"/"} />
       </>
     );
   }

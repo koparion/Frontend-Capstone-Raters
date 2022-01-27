@@ -17,7 +17,7 @@ const CommentList = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
-      window.location = "/";
+      window.location = "/comments";
     } catch (err) {
       console.log(err.message);
     }
@@ -70,7 +70,7 @@ const CommentList = () => {
         <div className="container mt-3">
           <div className="row d-flex mt-5 justify-content-center"></div>
           {comList.map((comm) => (
-            <div className="card p-3 mt-3" key={comm.id}>
+            <div className="card p-4 mt-3" key={comm.id}>
               <div className="d-flex justify-content-between align-items-center">
                 <div className="user d-flex flex-row align-items-left">
                   {" "}

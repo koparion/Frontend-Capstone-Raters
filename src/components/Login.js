@@ -45,7 +45,7 @@ function Login(props) {
       if (redirect) {
         return (
           <>
-            <Navigate to={"/profile"} />
+            <Navigate to={"/trending"} />
           </>
         );
       }
