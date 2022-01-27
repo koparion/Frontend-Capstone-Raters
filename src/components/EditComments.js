@@ -37,7 +37,7 @@ const EditComment = ({comList}) => {
 </button>
 
 {/* <!-- Modal --> */}
-{/* <div className="modal fade" id = {`id${comList.id}`} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"onClick={() => setDescription (comList.description)}>
+<div className="modal fade" id = {`id${comList.id}`} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"onClick={() => setDescription (comList.description)}>
   <div className="modal-dialog">
     <div className="modal-content">
       <div className="modal-header">
@@ -53,8 +53,8 @@ const EditComment = ({comList}) => {
       </div>
     </div>
   </div>
-</div> */}
-<div class="modal" id = {`id${comList.id}`} tabindex="-1">
+</div>
+{/* <div class="" id = {`id${comList.id}`} tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -70,7 +70,7 @@ const EditComment = ({comList}) => {
       </div>
     </div>
   </div>
-</div>
+</div> */}
         </Fragment>
     )
 }

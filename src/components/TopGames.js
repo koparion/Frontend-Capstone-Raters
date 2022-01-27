@@ -44,7 +44,7 @@ const TopGames = () => {
                 <div class="row">
                   <div class="col">
                     <div class="p-3">
-                      <div class="card">
+                      <div class="card cards">
                         <img
                           src={game.background_image}
                           alt="game"

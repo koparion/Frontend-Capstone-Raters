@@ -5,8 +5,8 @@ function Loading() {
   const image = require('../images/welcomeimage.jpg');
 
   return <div className='container' >
-      <div class="container h-100">
-    <div class="row align-items-center h-100 mt-5">
+      <div className="container h-100">
+    <div className="row align-items-center h-100 mt-5">
 
       <h1 className='text-center justify-content-center '>Welcome to our Capstone </h1>
       <div className='d-flex justify-content-center align-items-center'>

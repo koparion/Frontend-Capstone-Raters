@@ -3,15 +3,27 @@ import {Link} from 'react-router-dom';
 import axios from "axios";
 import "./Comment.css";
 import EditComment from "./EditComments";
+import { Counter } from "../features/counter/Counter";
 
 const CommentList = () => {
   const [comList, setComList] = useState([]);
   const [description, setDescription] = useState("");
+  const [date, setDate] = useState("");
+
+ 
+   
 
   const inputComment = async (e) => {
     e.preventDefault();
     try {
-      const body = { description };
+
+      var today = new Date();
+      var dd = String(today.getDate()).padStart(2, "0");
+      var mm = String(today.getMonth() + 1).padStart(2, "0");
+      var yyyy = today.getFullYear();
+      today = mm + " " + dd + "," + yyyy;
+      setDate(today);
+      const body = { description, date };
       const response = await fetch("http://localhost:5000/comment", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -22,6 +34,7 @@ const CommentList = () => {
       console.log(err.message);
     }
   };
+
 
   const getComments = async () => {
     try {
@@ -58,11 +71,11 @@ const CommentList = () => {
         <ul className='navbar-nav '>
            {/* <li className='nav-item'> <Link to="/logIn" >Login</Link></li> */}
            <Link className='nav-item btn btn-dark' to="/profile">Profile</Link>
-           <Link className='nav-item btn btn-dark active text-color-green' aria-current="page" to="/trending">Trending</Link>
+           <Link className='nav-item btn btn-dark text-color-green' aria-current="page" to="/trending">Trending</Link>
            <Link className='nav-item btn btn-dark' to={'/searchfield'}>
         <li>Search</li>
         </Link>
-        <Link className='nav-item btn btn-dark' to="/comments">Comments</Link>
+        <Link className='nav-item btn btn-dark active' to="/comments">Comments</Link>
             </ul>
 </nav>
 
@@ -90,7 +103,7 @@ const CommentList = () => {
                   </div>
                   <div>
                     {" "}
-                    <small> (placeholder: 2 days ago)</small>{" "}
+                    <small><span></span> {comm.date}</small>{" "}
                     <small>
                       {" "}
                       <EditComment comList={comm} />
