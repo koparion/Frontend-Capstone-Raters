@@ -34,7 +34,7 @@ function App() {
             <Routes>
               {/* Change the paths to the right user */}
               <Route path="/Home" element={<Home />} />
-              <Route path="/" element={<Welcome />} />}
+              <Route path="/" element={<Welcome />} />
               {lockin && <Route path="/profile" element={<Profile />} />}
               <Route path="/login" element={<Login setLockin={setLockin} />} />
               <Route path="/register" exact element={<Registration />} />

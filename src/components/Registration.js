@@ -42,7 +42,7 @@ export default function Registration(props) {
       };
 
       const response = await fetch("https://capstoneapinodejs.herokuapp.com/register", {
-        method: "POST",
+        method: "OPTIONS",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       
@@ -58,7 +58,7 @@ export default function Registration(props) {
   if (redirect) {
     return (
       <>
-        <Navigate to={"/"} />
+        <Navigate to={"/welcome"} />
       </>
     );
   }
