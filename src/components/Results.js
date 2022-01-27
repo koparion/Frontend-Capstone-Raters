@@ -24,8 +24,8 @@ const Results = (props) => {
             </ul> */}
                      <div class="row">
                   <div class="col">
-                    <div class="card">
-                      <div class="card">
+                    <div class="card cards">
+                      <div class="card cards">
                         <img
                           src={game.background_image}
                           alt="game"
