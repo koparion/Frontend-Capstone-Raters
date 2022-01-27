@@ -8,7 +8,7 @@ const Profile = () => {
 
   const getUser = async () => {
     try {
-      const response = await fetch("http://localhost:5000/users");
+      const response = await fetch("https://capstoneapinodejs.herokuapp.com/users");
       const userData = await response.json();
 
       setUsers(userData);
@@ -55,7 +55,7 @@ const Profile = () => {
         ></img>
       </div>
 
-      <div className="d-flex flex-column mt-5 container  p-5">
+      <div className="d-flex flex-column mt-5 container profiles p-5">
         <h3 className="text-center t_color">Profile Info</h3>
 
         {users.map((u) => (

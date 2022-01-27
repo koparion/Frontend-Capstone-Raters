@@ -8,28 +8,25 @@ import { Counter } from "../features/counter/Counter";
 const CommentList = () => {
   const [comList, setComList] = useState([]);
   const [description, setDescription] = useState("");
-  const [date, setDate] = useState("");
-
- 
-   
+  // const [date, setDate] = useState("");
 
   const inputComment = async (e) => {
     e.preventDefault();
     try {
 
-      var today = new Date();
-      var dd = String(today.getDate()).padStart(2, "0");
-      var mm = String(today.getMonth() + 1).padStart(2, "0");
-      var yyyy = today.getFullYear();
-      today = mm + " " + dd + "," + yyyy;
-      setDate(today);
-      const body = { description, date };
-      const response = await fetch("http://localhost:5000/comment", {
+      // var today = new Date();
+      // var dd = String(today.getDate()).padStart(2, "0");
+      // var mm = String(today.getMonth() + 1).padStart(2, "0");
+      // var yyyy = today.getFullYear();
+      // today = mm + " " + dd + "," + yyyy;
+      // setDate(today);
+      const body = { description };
+      const response = await fetch("https://capstoneapinodejs.herokuapp.com/comment", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
-      window.location = "/comments";
+      // window.location = "/comments";
     } catch (err) {
       console.log(err.message);
     }
@@ -38,7 +35,7 @@ const CommentList = () => {
 
   const getComments = async () => {
     try {
-      const url = "http://localhost:5000/comments";
+      const url = "https://capstoneapinodejs.herokuapp.com/comments";
       axios.get(url).then(async (response) => {
         const data = await response.data;
         setComList(data);
@@ -52,7 +49,7 @@ const CommentList = () => {
   const deleteComments = async (id) => {
     try {
       const removeCom = await axios.delete(
-        `http://localhost:5000/comments/${id}`
+        `https://capstoneapinodejs.herokuapp.com/comments/${id}`
       );
       setComList(comList.filter((comList) => comList.id !== id));
     } catch (err) {

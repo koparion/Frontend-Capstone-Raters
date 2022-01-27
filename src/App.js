@@ -34,7 +34,7 @@ function App() {
             <Routes>
               {/* Change the paths to the right user */}
               <Route path="/Home" element={<Home />} />
-              <Route path="/" element={<Welcome setLockin={setLockin}/>} />
+              <Route path="/" element={<Welcome />} />}
               {lockin && <Route path="/profile" element={<Profile />} />}
               <Route path="/login" element={<Login setLockin={setLockin} />} />
               <Route path="/register" exact element={<Registration />} />
@@ -42,7 +42,7 @@ function App() {
               {lockin && <Route path="/topgames" element={<TopGames />} />}
               {lockin && <Route path="/searchfield" element={<SearchField />} />}
               {lockin && <Route path="/comments" element={<Comment />} />}
-              <Route path="/game/:name" element={<GameDetails />} />
+              {lockin && <Route path="/game/:name" element={<GameDetails />} />}
             </Routes>
           </Router>
           {/* <div className="footer mt-5">

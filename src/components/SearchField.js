@@ -47,9 +47,9 @@ const SearchField = () => {
           <Link className="nav-item btn btn-dark active" to={"/searchfield"}>
             <li>Search</li>
           </Link>
-          <Link className='nav-item btn btn-dark' to="/comments">
+          <Link className="nav-item btn btn-dark" to="/comments">
             Comments
-            </Link>
+          </Link>
         </ul>
 
         {/* <form className ="form-inline">
@@ -57,8 +57,8 @@ const SearchField = () => {
     <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
   </form> */}
       </nav>
-     
-      <h1 className='mt-4'>Search Games</h1>
+
+      <h1 className="mt-4">Search Games</h1>
       <form onSubmit={onSubmit}>
         <input type="text" value={searchTerm} onChange={handleChange} />
         <br></br>
