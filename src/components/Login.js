@@ -15,13 +15,13 @@ function Login(props) {
         username: username,
         password: password,
       };
-      const response = await fetch(`https://capstoneapinodejs.herokuapp.com/login/${username}`, {
+      const response = await fetch(`http://localhost:5000/login/${username}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
       setLockin(true); // making the page visible
-      setRedirect(true);
+      setRedirect(true); // was true
       console.log(response);
     } catch (err) {
       console.error(err);
@@ -48,7 +48,7 @@ function Login(props) {
   if (redirect) {
     return (
       <>
-        <Navigate to={"/trending"} />
+        <Navigate to={"/profile"} />
       </>
     );
   }

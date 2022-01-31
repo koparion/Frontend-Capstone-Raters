@@ -7,33 +7,34 @@ import { Navigate } from "react-router-dom";
 const EditComment = ({comList}) => {
 
     const [description, setDescription] = useState(comList.description)
-    const [redirect, setRedirect] = useState(false);
+    // const [redirect, setRedirect] = useState(false);
     
     const updateDescription = async (e) =>{
 
         e.preventDefault()
         try {
             const body = {description}
-            const response = await fetch(`https://capstoneapinodejs.herokuapp.com/comments/${comList.id}`,
+            const response = await fetch(`http://localhost:5000/comments/${comList.id}`,
             {
                 method: "PUT",
                 headers:{"Content-Type":
                 "application/json"},
                 body: JSON.stringify(body)
             })
-            setRedirect(true);
+            window.location='/comments'
+            // setRedirect(true);
         } catch (err) {
             console.error(err.message)
         }
 
     } 
-    if (redirect) {
-      return (
-        <>
-          <Navigate to={"/comments"}/>
-        </>
-      );
-    }
+    // if (redirect) {
+    //   return (
+    //     <>
+    //       <Navigate to={"/comments"}/>
+    //     </>
+    //   );
+    // }
 
     
     return(
