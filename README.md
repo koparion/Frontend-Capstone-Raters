@@ -1,44 +1,22 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## TTP Capstone Project
+![image](https://user-images.githubusercontent.com/77630749/151597119-2bc0a13b-3ee5-4b2e-a935-45501de82279.png)
+## MVP Overview
+![image](https://user-images.githubusercontent.com/77630749/151597307-55f53155-b1c0-4c8f-bf98-e856c17768f1.png)
+## Technologies Used
+![image](https://user-images.githubusercontent.com/77630749/151597443-a92b4b80-2f18-4563-898f-004fb243df49.png)
+## Login & Profile Page
+![image](https://user-images.githubusercontent.com/77630749/151597618-794c77ad-94b6-4567-9ef6-18479f36e78d.png)
+## Trending & Search Page
+![image](https://user-images.githubusercontent.com/77630749/151597695-6ee6166f-f81d-4f20-9781-5bea4bbc172e.png)
+## Comments Page & CRUD
+![image](https://user-images.githubusercontent.com/77630749/151597759-302b45f2-b91f-4683-a012-cba667517132.png)
+## Additional Features
+![image](https://user-images.githubusercontent.com/77630749/151597856-3976b419-a26f-458c-9299-8554adfa2542.png)
+## Next Iteration
+![image](https://user-images.githubusercontent.com/77630749/151597922-1719328c-91ad-4c88-a4ad-a00a8904f5b1.png)
+## Contributors
+- [@koparion](https://github.com/koparion)
+- [@simonchrist](https://github.com/simonchrist)
+- [@jlorenzo58](https://github.com/jlorenzo58)
+- [@ChibuzorOkoye](https://github.com/ChibuzorOkoye)
+- [@Gihan1937](https://github.com/Gihan1937)
