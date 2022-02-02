@@ -52,7 +52,7 @@ const CommentList = () => {
   const deleteComments = async (id) => {
     try {
       const removeCom = await axios.delete(
-        `http://localhost:5000/comments/${id}`
+        `https://capstoneapinodejs.herokuapp.com/comments/${id}`
       );
       setComList(comList.filter((comList) => comList.id !== id));
     } catch (err) {

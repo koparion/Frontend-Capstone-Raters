@@ -18,6 +18,7 @@ import GameDetails from "./components/GameDetails";
 import Comment from "./components/Comment";
 import Loading from "./components/Loading";
 
+
 function App() {
   const [lockin, setLockin] = useState(false); //preventing page viewing without login
   const [loading, setLoading] = useState(true);

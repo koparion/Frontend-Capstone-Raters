@@ -8,7 +8,7 @@ const Profile = () => {
 
   const getUser = async () => {
     try {
-      const response = await fetch("http://localhost:5000/users");
+      const response = await fetch("https://capstoneapinodejs.herokuapp.com/users");
       const userData = await response.json();
 
       setUsers(userData);

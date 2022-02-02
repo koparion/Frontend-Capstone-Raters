@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Results from "./Results";
 import { Link } from "react-router-dom";
 
+
 const SearchField = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [gameResults, setGameResults] = useState([]);
@@ -10,13 +11,14 @@ const SearchField = () => {
     setSearchTerm(event.target.value);
   };
 
+  <pre>{process.env.REACT_APP_API_KEY}</pre> //allows use of env file
   const onSubmit = (event) => {
     event.preventDefault();
     let slug = searchTerm.split(" ").join("-").toLowerCase();
 
     setGameResults([]);
     fetch(
-      `https://rawg.io/api/games?search=${slug}&key=8168270edeb44316bc96ab82242e931d`
+      `https://rawg.io/api/games?search=${slug}&key=${process.env.REACT_APP_API_KEY}`
     )
       .then((response) => response.json())
       .then(({ results }) => {
