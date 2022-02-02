@@ -28,7 +28,7 @@ function App() {
 
   return (
     <>
-      {loading === false ? (
+      {/* {loading === false ? ( */}
         <div className="App">
           <Router>
             <Routes>
@@ -52,8 +52,8 @@ function App() {
       </div> */}
         </div>
       ) : (
-        <Loading />
-      )}
+        {/* <Loading /> */}
+      {/* )} */}
     </>
   );
 }

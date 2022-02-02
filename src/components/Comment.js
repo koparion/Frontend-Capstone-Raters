@@ -24,12 +24,12 @@ const CommentList = () => {
       today = mm + " " + dd + "," + yyyy;
       setDate(today);
       const body = { description, date };
-      const response = await fetch("http://localhost:5000/comment", {
+      const response = await fetch("https://capstoneapinodejs.herokuapp.com/comments", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
-      window.location = "/comments";
+      window.location = "/";
     } catch (err) {
       console.log(err.message);
     }
@@ -38,7 +38,7 @@ const CommentList = () => {
 
   const getComments = async () => {
     try {
-      const url = "http://localhost:5000/comments";
+      const url = "https://capstoneapinodejs.herokuapp.com/comments";
       axios.get(url).then(async (response) => {
         const data = await response.data;
         setComList(data);
