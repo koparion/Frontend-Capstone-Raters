@@ -10,23 +10,38 @@ function Login(props) {
     const [redirect, setRedirect] = useState(false);
     console.log(props)
     const {setLockin} = props;
-    const login = async () => {
-        try {
-          const body = {
-            username: username,
-            password: password,
-          };
-          const response = await fetch(`https://capstoneapinodejs.herokuapp.com/login/${username}`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(body),
-          });
-          setLockin(true); // making the page visible
-          setRedirect(true);
-          console.log(response);
-        } catch (err) {
-          console.error(err);
-        }
+    const login = async (e) => {
+      e.preventDefault();
+        // try {
+        //   const body = {
+        //     username: username,
+        //     password: password,
+        //   };
+        //   // const response = await fetch(`https://capstoneapinodejs.herokuapp.com/login/${username}`, {
+        //   const response = await fetch(`http://localhost:5000/login/${username}`, {
+        //     method: "POST",
+        //     headers: { "Content-Type": "application/json" },
+        //     body: JSON.stringify(body),
+        //   });
+        //   setLockin(true); // making the page visible
+        //   setRedirect(true);
+        //   console.log(response);
+        // } catch (err) {
+        //   console.error(err.message);
+        // }
+        try{
+          axios.post(`http://localhost:5000/login/${username}`,{
+              username: username,
+              password: password,
+          }).then((response)=>{
+              console.log(response);
+              setRedirect(true);
+              setLockin(true); // making the page visible
+          })
+      }catch(err)
+      {
+          console.error(err.message);
+      }
     }
       if (redirect) {
         return (
@@ -37,6 +52,7 @@ function Login(props) {
       }
   return <div className='container'>
       <div className="login bod mt-5">
+        <form onSubmit={login}>
           <h1>Sign In</h1>
           <input
             type="text"
@@ -53,7 +69,7 @@ function Login(props) {
             }}
           />
           <button className="btn" onClick={login}> Login </button>
-
+          </form>
         </div>
 
   </div>;

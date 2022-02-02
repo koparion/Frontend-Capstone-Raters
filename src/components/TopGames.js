@@ -41,10 +41,10 @@ const TopGames = () => {
                 {/* <h3>{game.name}</h3>
                   <img src={game.background_image} alt="game" />
                 </NavLink> */}
-                <div class="row">
-                  <div class="col">
-                    <div class="p-3">
-                      <div class="card cards">
+                <div className="row">
+                  <div className="col">
+                    <div className="p-3">
+                      <div className="card cards">
                         <img
                           src={game.background_image}
                           alt="game"
@@ -59,8 +59,8 @@ const TopGames = () => {
                       </div>
                     </div>
                   </div>
-                  <div class="col mt-5 p-4">
-                    <div class="border">
+                  <div className="col mt-5 p-4">
+                    <div className="border">
                       <GameDetails game={game} />
                     </div>
                   </div>
