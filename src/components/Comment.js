@@ -103,7 +103,7 @@ const CommentList = () => {
                   </div>
                   <div>
                     {" "}
-                    <small><span></span> {comm.date}</small>{" "}
+                    <small><span></span> {"----"}{comm.currentuser}</small>{" "}
                     <small>
                       {" "}
                       <EditComment comList={comm} />
