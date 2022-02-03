@@ -35,10 +35,7 @@ const CommentList = () => {
       console.log(err.message);
     }
   };
-if(redirect)
-{
-  return <Navigate to={"/comments"}/>
-}
+
 
   const getComments = async () => {
     try {
@@ -63,11 +60,14 @@ if(redirect)
       console.error(err.message);
     }
   };
-
   useEffect(() => {
     getComments();
   }, []);
 
+  if(redirect)
+  {
+    return <Navigate to={"/comments"}/>
+  }
   return (
     <Fragment>
 <nav className="navbar nav-tabs navbar-expand-lg navbar-light bg-dark justify-content-between">
