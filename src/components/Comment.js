@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
-import {Link} from 'react-router-dom';
+import {Link, Navigate} from 'react-router-dom';
 import axios from "axios";
 import "./Comment.css";
 import EditComment from "./EditComments";
