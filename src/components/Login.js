@@ -9,7 +9,7 @@ function Login(props) {
     const [password, setPassword] = useState("");
     const [redirect, setRedirect] = useState(false);
     console.log(props)
-    // const {setLockin} = props;
+    const {setLockin} = props;
     const login = async (e) => {
       e.preventDefault();
         // try {
@@ -37,7 +37,7 @@ function Login(props) {
           }).then((response)=>{
               console.log(response);
               setRedirect(true);
-              // setLockin(true); // making the page visible
+              setLockin(true); // making the page visible
           })
       }catch(err)
       {
@@ -47,7 +47,7 @@ function Login(props) {
       if (redirect) {
         return (
           <>
-            <Navigate to={"/trending"} />
+            <Navigate to={"/profile"} />
           </>
         );
       }

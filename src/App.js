@@ -21,7 +21,7 @@ import EditComment from "./components/EditComments";
 
 
 function App() {
-  // const [lockin, setLockin] = useState(false); //preventing page viewing without login
+  const [lockin, setLockin] = useState(false); //preventing page viewing without login
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -30,21 +30,21 @@ function App() {
 
   return (
     <>
-      {/* {loading === false ? ( */}
+      {loading === false ? (
         <div className="App">
           <Router>
             <Routes>
               {/* Change the paths to the right user */}
               <Route path="/Home" element={<Home />} />
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/login" element={<Login  />} />
+              {lockin && <Route path="/profile" element={<Profile />} />}
+              <Route path="/login" element={<Login setLockin={setLockin} />} />
               <Route path="/register" exact element={<Registration />} />
               <Route path="/trending" element={<Trending />} />
               <Route path="/topgames" element={<TopGames />} />
               <Route path="/searchfield" element={<SearchField />} />
               <Route path="/comments" element={<Comment />} />
               <Route path="/game/:name" element={<GameDetails />} />
-              <Route path="/" element={<Welcome />} />
+              <Route path="/" element={<Welcome setLockin={setLockin}/>} />
             </Routes>
           </Router>
           {/* <div className="footer mt-5">
@@ -54,8 +54,8 @@ function App() {
       </div> */}
         </div>
       ) : (
-        {/* <Loading /> */}
-      {/* )} */}
+         <Loading />
+       )} 
     </>
   );
 }
