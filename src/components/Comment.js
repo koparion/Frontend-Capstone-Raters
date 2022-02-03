@@ -107,7 +107,7 @@ if(redirect)
                   </div>
                   <div>
                     {" "}
-                    <small><span></span> {comm.date} by {comm.currentUser}</small>{" "}
+                    <small><span></span> {comm.date} by {comm.currentuser}</small>{" "}
                     <small>
                       {" "}
                       <EditComment comList={comm} />
