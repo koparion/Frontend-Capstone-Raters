@@ -16,7 +16,6 @@ const CommentList = () => {
   const inputComment = async (e) => {
     e.preventDefault();
     try {
-
       var today = new Date();
       var dd = String(today.getDate()).padStart(2, "0");
       var mm = String(today.getMonth() + 1).padStart(2, "0");
@@ -24,7 +23,7 @@ const CommentList = () => {
       today = mm + " " + dd + "," + yyyy;
       setDate(today);
       const body = { description, date };
-      const response = await fetch("https://capstoneapinodejs.herokuapp.com/comments", {
+      const response = await fetch("http://localhost:3000/comments", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
@@ -38,11 +37,11 @@ const CommentList = () => {
 
   const getComments = async () => {
     try {
-      const url = "https://capstoneapinodejs.herokuapp.com/comments";
+      const url = "http://localhost:3000/comments";
       axios.get(url).then(async (response) => {
         const data = await response.data;
         setComList(data);
-        //console.log(comList)
+        console.log("/////////////////////",comList)
       });
     } catch (err) {
       console.error(err.message);
@@ -52,7 +51,7 @@ const CommentList = () => {
   const deleteComments = async (id) => {
     try {
       const removeCom = await axios.delete(
-        `https://capstoneapinodejs.herokuapp.com/comments/${id}`
+        `http://localhost:3000/comments/${id}`
       );
       setComList(comList.filter((comList) => comList.id !== id));
     } catch (err) {
@@ -103,7 +102,7 @@ const CommentList = () => {
                   </div>
                   <div>
                     {" "}
-                    <small><span></span> {comm.date}</small>{" "}
+                    <small><span></span> {comm.currentuser}</small>{" "}      {/* changed to display user who created comment. */}
                     <small>
                       {" "}
                       <EditComment comList={comm} />
