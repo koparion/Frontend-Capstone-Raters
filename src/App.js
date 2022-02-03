@@ -20,7 +20,7 @@ import Loading from "./components/Loading";
 
 
 function App() {
-  const [lockin, setLockin] = useState(false); //preventing page viewing without login
+  //const [lockin, setLockin] = useState(false); //preventing page viewing without login
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -35,15 +35,15 @@ function App() {
             <Routes>
               {/* Change the paths to the right user */}
               <Route path="/Home" element={<Home />} />
-              <Route path="/" element={<Welcome setLockin={setLockin}/>} />
-              {lockin && <Route path="/profile" element={<Profile />} />}
-              <Route path="/login" element={<Login setLockin={setLockin} />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/login" element={<Login />} />
               <Route path="/register" exact element={<Registration />} />
-              {lockin && <Route path="/trending" element={<Trending />} />}
-              {lockin && <Route path="/topgames" element={<TopGames />} />}
-              {lockin && <Route path="/searchfield" element={<SearchField />} />}
-              {lockin && <Route path="/comments" element={<Comment />} />}
+              <Route path="/trending" element={<Trending />} />
+              <Route path="/topgames" element={<TopGames />} />
+              <Route path="/searchfield" element={<SearchField />} />
+              <Route path="/comments" element={<Comment />} />
               <Route path="/game/:name" element={<GameDetails />} />
+              <Route path="/" element={<Welcome />} />
             </Routes>
           </Router>
           {/* <div className="footer mt-5">

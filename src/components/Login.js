@@ -8,8 +8,8 @@ function Login(props) {
     const [username, setUsername] = useState(""); //will hold the username and password for the login. will be checked in the login function.
     const [password, setPassword] = useState("");
     const [redirect, setRedirect] = useState(false);
-    console.log(props)
-    const {setLockin} = props;
+    //console.log(props)
+    //const {setLockin} = props;
     const login = async (e) => {
       e.preventDefault();
         // try {
@@ -36,7 +36,7 @@ function Login(props) {
           }).then((response)=>{
               console.log(response);
               setRedirect(true);
-              setLockin(true); // making the page visible
+              //setLockin(true); // making the page visible
           })
       }catch(err)
       {
