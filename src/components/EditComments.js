@@ -21,18 +21,14 @@ const EditComment = ({comList}) => {
                 "application/json"},
                 body: JSON.stringify(body)
             })
-            window.location = "/comments"
+            window.location = "/comments";
 
         } catch (err) {
             console.error(err.message)
         }
 
     } 
-    if(redirect)
-    {
-      return <Navigate to={"/comments"}/>
-    }
-
+  
     
     return(
         <Fragment>
