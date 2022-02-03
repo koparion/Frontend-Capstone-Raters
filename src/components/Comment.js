@@ -23,6 +23,7 @@ const CommentList = () => {
       today = mm + " " + dd + "," + yyyy;
       setDate(today);
       const body = { description, date };
+      // const response = await fetch("http://localhost:5000/comments", {
       const response = await fetch("https://capstoneapinodejs.herokuapp.com/comments", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -38,6 +39,7 @@ const CommentList = () => {
 
   const getComments = async () => {
     try {
+      // const url = "http://localhost:5000/comments";
       const url = "https://capstoneapinodejs.herokuapp.com/comments";
       axios.get(url).then(async (response) => {
         const data = await response.data;
@@ -52,6 +54,7 @@ const CommentList = () => {
   const deleteComments = async (id) => {
     try {
       const removeCom = await axios.delete(
+        // `http://localhost:5000/comments/${id}`
         `https://capstoneapinodejs.herokuapp.com/comments/${id}`
       );
       setComList(comList.filter((comList) => comList.id !== id));
@@ -63,6 +66,7 @@ const CommentList = () => {
     getComments();
   }, []);
 
+   
 
   return (
     <Fragment>
@@ -79,8 +83,8 @@ const CommentList = () => {
             </ul>
 </nav>
 
-      <div>
-        <div className="container mt-3">
+      <div className="container">
+        <div className="d-flex row mt-3 justify-content-center">
           <div className="row d-flex mt-5 justify-content-center"></div>
           {comList.map((comm) => (
             <div className="card p-4 mt-3" key={comm.id}>
@@ -103,7 +107,7 @@ const CommentList = () => {
                   </div>
                   <div>
                     {" "}
-                    <small><span></span> {comm.date} by {comm.currentuser}</small>{" "}
+                    <small><span> {comm.format} by {comm.currentuser}</span></small>{" "}
                     <small>
                       {" "}
                       <EditComment comList={comm} />
