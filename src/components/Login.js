@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Navigate} from 'react-router-dom'
 import Home from './Home';
 import axios from 'axios';
@@ -8,6 +8,16 @@ function Login(props) {
     const [username, setUsername] = useState(""); //will hold the username and password for the login. will be checked in the login function.
     const [password, setPassword] = useState("");
     const [redirect, setRedirect] = useState(false);
+    const [user, setUser] = useState();
+
+    // useEffect(() => {
+    //   const loggedInUser = localStorage.getItem("username");
+    //   if (loggedInUser) {
+    //     const foundUser = JSON.parse(loggedInUser);
+    //     setUser(foundUser);
+    //   }
+    // }, []);
+
     console.log(props)
     const {setLockin} = props;
     const login = async (e) => {
@@ -37,6 +47,7 @@ function Login(props) {
               console.log(response);
               setRedirect(true);
               setLockin(true); // making the page visible
+
           })
       }catch(err)
       {
@@ -44,12 +55,16 @@ function Login(props) {
       }
     }
       if (redirect) {
+    
         return (
           <>
             <Navigate to={"/trending"} />
           </>
         );
       }
+      //stay logged in
+       
+
   return <div className='container'>
       <div className="login bod mt-5">
         <form onSubmit={login}>

@@ -5,12 +5,12 @@ import "./Comment.css";
 import EditComment from "./EditComments";
 import { Counter } from "../features/counter/Counter";
 
-const CommentList = () => {
+const CommentList = (props) => {
   const [comList, setComList] = useState([]);
   const [description, setDescription] = useState("");
   const [date, setDate] = useState("");
 
- 
+  const {setLockin} = props;
    
 
   const inputComment = async (e) => {
@@ -29,7 +29,9 @@ const CommentList = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
-      window.location = "/";
+     
+      window.location = "/comments";
+      setLockin(true);
     } catch (err) {
       console.log(err.message);
     }
@@ -103,7 +105,7 @@ const CommentList = () => {
                   </div>
                   <div>
                     {" "}
-                    <small><span></span> {comm.date}</small>{" "}
+                    <small><span></span> {comm.date} by {comm.currentuser}</small>{" "}
                     <small>
                       {" "}
                       <EditComment comList={comm} />

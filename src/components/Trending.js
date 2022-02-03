@@ -1,3 +1,4 @@
+import { set } from 'date-fns';
 import React, {Fragment} from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import {Link} from 'react-router-dom';
@@ -9,6 +10,7 @@ import TopGames from './TopGames';
 
 const Trending = () =>
 {
+
     return(
         <Fragment>
             <nav className="navbar nav-tabs navbar-expand-lg navbar-light bg-dark justify-content-between">

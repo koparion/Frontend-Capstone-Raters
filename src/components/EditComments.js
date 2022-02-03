@@ -1,33 +1,36 @@
 import axios from "axios";
 import React,{Fragment, useState} from "react";
+import { Navigate } from "react-router-dom";
 
 
 
 
-const EditComment = ({comList}) => {
+const EditComment = ({comList,setLockin}) => {
 
     const [description, setDescription] = useState(comList.description)
-    
+    const [redirect, setRedirect] = useState(false);
     
     const updateDescription = async (e) =>{
 
         e.preventDefault()
         try {
             const body = {description}
-            const response = await fetch(`https://capstoneapinodejs.herokuapp.com/comments/${comList.id}`,
+            const response = await fetch(`http://localhost:5000/comments/${comList.id}`,
+            // const response = await fetch(`https://capstoneapinodejs.herokuapp.com/comments/${comList.id}`,
             {
                 method: "PUT",
                 headers:{"Content-Type":
                 "application/json"},
                 body: JSON.stringify(body)
             })
-            window.location = "/"
+            // window.location = "/comments"
+            window.location = "/trending";
+            setLockin(true);
         } catch (err) {
             console.error(err.message)
         }
 
     } 
-
 
     
     return(
