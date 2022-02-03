@@ -20,8 +20,8 @@ import Loading from "./components/Loading";
 
 
 function App() {
-  const [lockin, setLockin] = useState(false); //preventing page viewing without login
-  // const [loading, setLoading] = useState(true);
+  // const [lockin, setLockin] = useState(false); //preventing page viewing without login
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => setLoading(false), 5000);
