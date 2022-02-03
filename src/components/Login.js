@@ -36,7 +36,7 @@ function Login(props) {
           }).then((response)=>{
               console.log(response);
               setRedirect(true);
-              setLockin(true); // making the page visible
+              // setLockin(true); // making the page visible
           })
       }catch(err)
       {
