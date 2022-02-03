@@ -29,7 +29,7 @@ const CommentList = () => {
         body: JSON.stringify(body),
       });
 
-      window.location = "/";
+      window.location.reload();
     } catch (err) {
       console.log(err.message);
     }

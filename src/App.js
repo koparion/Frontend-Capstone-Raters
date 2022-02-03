@@ -36,7 +36,6 @@ function App() {
             <Routes>
               {/* Change the paths to the right user */}
               <Route path="/Home" element={<Home />} />
-              <Route path="/" element={<Welcome />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/login" element={<Login  />} />
               <Route path="/register" exact element={<Registration />} />
@@ -45,6 +44,7 @@ function App() {
               <Route path="/searchfield" element={<SearchField />} />
               <Route path="/comments" element={<Comment />} />
               <Route path="/game/:name" element={<GameDetails />} />
+              <Route path="/" element={<Welcome />} />
             </Routes>
           </Router>
           {/* <div className="footer mt-5">
