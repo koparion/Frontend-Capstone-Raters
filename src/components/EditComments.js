@@ -7,7 +7,7 @@ import { Navigate } from "react-router-dom";
 const EditComment = ({comList}) => {
 
     const [description, setDescription] = useState(comList.description)
-    const [redirect, setRedirect] = useState(false);
+
     
     const updateDescription = async (e) =>{
 
@@ -21,8 +21,8 @@ const EditComment = ({comList}) => {
                 "application/json"},
                 body: JSON.stringify(body)
             })
-            // window.location = "/"
-            setRedirect(true);
+            window.location = "/comments"
+
         } catch (err) {
             console.error(err.message)
         }

@@ -17,6 +17,7 @@ import SearchField from "./components/SearchField";
 import GameDetails from "./components/GameDetails";
 import Comment from "./components/Comment";
 import Loading from "./components/Loading";
+import EditComment from "./components/EditComments";
 
 
 function App() {
@@ -42,7 +43,7 @@ function App() {
               <Route path="/trending" element={<Trending />} />
               <Route path="/topgames" element={<TopGames />} />
               <Route path="/searchfield" element={<SearchField />} />
-              <Route path="/comments" element={<Comment />} />
+              <Route path="/comments" element={<><Comment /><EditComment /></>} />
               <Route path="/game/:name" element={<GameDetails />} />
             </Routes>
           </Router>

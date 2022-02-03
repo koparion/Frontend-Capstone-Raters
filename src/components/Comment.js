@@ -9,7 +9,6 @@ const CommentList = () => {
   const [comList, setComList] = useState([]);
   const [description, setDescription] = useState("");
   const [date, setDate] = useState("");
-  const [redirect, setRedirect] = useState(false);
  
    
 
@@ -29,8 +28,8 @@ const CommentList = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
-      setRedirect(true);
-      // window.location = "/comments";
+
+      window.location = "/comments";
     } catch (err) {
       console.log(err.message);
     }
@@ -64,10 +63,7 @@ const CommentList = () => {
     getComments();
   }, []);
 
-  if(redirect)
-  {
-    return <Navigate to={"/comments"}/>
-  }
+
   return (
     <Fragment>
 <nav className="navbar nav-tabs navbar-expand-lg navbar-light bg-dark justify-content-between">
