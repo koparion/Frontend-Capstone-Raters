@@ -7,7 +7,7 @@ import React,{Fragment, useState} from "react";
 const EditComment = ({comList}) => {
 
     const [description, setDescription] = useState(comList.description)
-    
+    const [redirect, setRedirect] = useState(false);
     
     const updateDescription = async (e) =>{
 
@@ -21,13 +21,17 @@ const EditComment = ({comList}) => {
                 "application/json"},
                 body: JSON.stringify(body)
             })
-            window.location = "/comments"
+            // window.location = "/"
+            setRedirect(true);
         } catch (err) {
             console.error(err.message)
         }
 
     } 
-
+    if(redirect)
+    {
+      return <Navigate to={"/comments"}/>
+    }
 
     
     return(

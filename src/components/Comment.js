@@ -9,7 +9,7 @@ const CommentList = () => {
   const [comList, setComList] = useState([]);
   const [description, setDescription] = useState("");
   const [date, setDate] = useState("");
-
+  const [redirect, setRedirect] = useState(false);
  
    
 
@@ -29,12 +29,16 @@ const CommentList = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
-      window.location = "/comments";
+      setRedirect(true);
+      // window.location = "/comments";
     } catch (err) {
       console.log(err.message);
     }
   };
-
+if(redirect)
+{
+  return <Navigate to={"/comments"}/>
+}
 
   const getComments = async () => {
     try {

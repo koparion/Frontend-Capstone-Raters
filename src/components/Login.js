@@ -9,7 +9,7 @@ function Login(props) {
     const [password, setPassword] = useState("");
     const [redirect, setRedirect] = useState(false);
     console.log(props)
-    const {setLockin} = props;
+    // const {setLockin} = props;
     const login = async (e) => {
       e.preventDefault();
         // try {
