@@ -21,7 +21,7 @@ const EditComment = ({comList}) => {
                 "application/json"},
                 body: JSON.stringify(body)
             })
-            window.location = "/comments";
+            window.location = "/";
 
         } catch (err) {
             console.error(err.message)

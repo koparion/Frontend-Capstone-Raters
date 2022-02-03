@@ -43,7 +43,7 @@ function App() {
               <Route path="/trending" element={<Trending />} />
               <Route path="/topgames" element={<TopGames />} />
               <Route path="/searchfield" element={<SearchField />} />
-              <Route path="/comments" element={<><Comment /><EditComment /></>} />
+              <Route path="/comments" element={<Comment />} />
               <Route path="/game/:name" element={<GameDetails />} />
             </Routes>
           </Router>
